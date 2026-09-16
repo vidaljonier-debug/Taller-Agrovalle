@@ -18,9 +18,9 @@ pedidos y stock, y coordinar la logística y trazabilidad entre productores y co
 | Nombre | Rol en el equipo | Usuario GitHub |
 |---|---|---|
 | Jhonier | | |
-| David Montoya | | |
-| Juan Felipe Choco | | |
-| Laura Caicedo | | |
+| Valentina | | |
+| Deibis | | |
+| Carlos | | |
 
 ## Módulos del sistema
 
