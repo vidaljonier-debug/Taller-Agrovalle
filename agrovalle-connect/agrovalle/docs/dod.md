@@ -58,4 +58,4 @@ y que cumple los criterios anteriores.
 | Jhonier | | |
 | Jhon | | |
 | Valentina | | |
-| Jean carlos| | |
+| carlos| | |
