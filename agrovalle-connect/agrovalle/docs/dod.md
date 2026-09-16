@@ -57,5 +57,5 @@ y que cumple los criterios anteriores.
 |---|---|---|
 | Jhonier | | |
 | Valentina | | |
-| Jhon deibis | | |
-| Jean carlos | | |
+| Jhon  | | |
+| Jean carlos| | |
