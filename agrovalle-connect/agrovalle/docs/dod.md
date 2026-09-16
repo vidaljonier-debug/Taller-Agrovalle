@@ -56,6 +56,6 @@ y que cumple los criterios anteriores.
 | Nombre | Firma / usuario GitHub | Fecha |
 |---|---|---|
 | Jhonier | | |
+| Jhon | | |
 | Valentina | | |
-| Jhon  | | |
 | Jean carlos| | |
