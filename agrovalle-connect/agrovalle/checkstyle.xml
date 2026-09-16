@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+    "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<!-- Configuración base para AgroValle Connect: nombres, imports, formato y complejidad -->
+<module name="Checker">
+    <property name="charset" value="UTF-8"/>
+    <property name="severity" value="error"/>
+    <property name="fileExtensions" value="java"/>
+
+    <module name="FileLength">
+        <property name="max" value="2000"/>
+    </module>
+    <module name="LineLength">
+        <property name="max" value="120"/>
+        <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://"/>
+    </module>
+
+    <module name="TreeWalker">
+        <!-- Nombres -->
+        <module name="MethodName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="ConstantName"/>
+        <module name="ClassTypeParameterName"/>
+        <module name="PackageName"/>
+        <module name="TypeName"/>
+
+        <!-- Imports -->
+        <module name="AvoidStarImport"/>
+        <module name="UnusedImports"/>
+        <module name="RedundantImport"/>
+
+        <!-- Llaves / bloques -->
+        <module name="NeedBraces"/>
+        <module name="LeftCurly"/>
+        <module name="RightCurly"/>
+        <module name="EmptyBlock"/>
+
+        <!-- Espacios en blanco -->
+        <module name="WhitespaceAround"/>
+        <module name="GenericWhitespace"/>
+        <module name="MethodParamPad"/>
+
+        <!-- Javadoc en APIs públicas -->
+        <module name="MissingJavadocMethod">
+            <property name="scope" value="public"/>
+            <property name="minLineCount" value="5"/>
+        </module>
+
+        <!-- Complejidad y duplicación -->
+        <module name="CyclomaticComplexity">
+            <property name="max" value="12"/>
+        </module>
+        <module name="MethodLength">
+            <property name="max" value="80"/>
+        </module>
+        <module name="ParameterNumber">
+            <property name="max" value="7"/>
+        </module>
+
+        <!-- Buenas prácticas -->
+        <module name="EqualsHashCode"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="MagicNumber">
+            <property name="ignoreNumbers" value="-1, 0, 1, 2"/>
+        </module>
+    </module>
+</module>
