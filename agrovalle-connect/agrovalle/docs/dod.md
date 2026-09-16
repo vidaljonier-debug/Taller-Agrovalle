@@ -56,6 +56,6 @@ y que cumple los criterios anteriores.
 | Nombre | Firma / usuario GitHub | Fecha |
 |---|---|---|
 | Jhonier | | |
-| David Montoya | | |
-| Juan Felipe Choco | | |
-| Laura Caicedo | | |
+| Valentina | | |
+| Jhon deibis | | |
+| Jean carlos | | |
