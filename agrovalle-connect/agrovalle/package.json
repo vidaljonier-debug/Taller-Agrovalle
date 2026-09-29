@@ -1,0 +1,12 @@
+{
+  "name": "agrovalle-connect",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hooks de pre-commit (Husky + Checkstyle) para AgroValle Connect",
+  "scripts": {
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.0.0"
+  }
+}
