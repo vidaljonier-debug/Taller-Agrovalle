@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+
+# Hook pre-commit de AgroValle Connect.
+# Ejecuta la validación técnica antes de permitir el commit.
+echo "[Husky] Ejecutando validaciones pre-commit..."
+./mvnw -q -DskipTests=false verify 2>/dev/null || mvn -q -DskipTests=false verify

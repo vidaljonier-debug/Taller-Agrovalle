@@ -1,0 +1,40 @@
+# Maven
+/target/
+!**/src/**/target/
+
+# Spring / logs
+*.log
+*.tmp
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment / secrets
+.env
+.env.*
+application-local.yml
+
+# Node / Husky
+node_modules/
+npm-debug.log*
+
+# Coverage
+/jacoco.exec
+/jacoco-report/
+
+# Build artifacts
+*.jar
+*.war
+
+# Local database / uploads
+/data/
+/uploads/
