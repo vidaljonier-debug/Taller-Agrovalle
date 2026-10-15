@@ -140,6 +140,8 @@ mvn spring-boot:run
 - [`docs/sprint-1-retrospective.md`](./docs/sprint-1-retrospective.md) — retrospectiva en tercera persona.
 - [`docs/github-projects-kanban.md`](./docs/github-projects-kanban.md) — columnas y límites WIP para GitHub Projects.
 - [`docs/entrega.md`](./docs/entrega.md) — checklist de la entrega PDF.
+- [`docs/sprint-diseno/`](./docs/sprint-diseno/00-planning-sprint-diseno.md) — Sprint de Diseño: casos de uso, actividad, clases, secuencia, colaboración, despliegue, modelo E-R y patrones.
+- [`docs/adr/`](./docs/adr/) — Architecture Decision Records (ADR-001 a ADR-005).
 
 ## CI/CD
 

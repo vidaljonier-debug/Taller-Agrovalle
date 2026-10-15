@@ -26,14 +26,14 @@ Basado en el estándar **ISO/IEC 25010**. Una historia de usuario se considera *
 - [ ] 15 historias de usuario documentadas y priorizadas (`BACKLOG.md`).
 - [ ] Planning Poker realizado y Story Points validados por el equipo.
 - [ ] Criterios BDD (Given-When-Then) para las 15 HU.
-- [ ] Diagrama de casos de uso.
-- [ ] Diagrama de actividad.
-- [ ] Diagrama de clases.
-- [ ] Diagrama de secuencia.
-- [ ] Diagrama de colaboración.
-- [ ] Diagrama de despliegue físico.
-- [ ] ADRs (Architecture Decision Records) en el repositorio.
-- [ ] Patrones Repository, Factory, Observer y Singleton justificados/implementados.
+- [x] Diagrama de casos de uso (`docs/sprint-diseno/01-casos-de-uso.md`).
+- [x] Diagrama de actividad (`docs/sprint-diseno/02-diagramas-actividad.md`).
+- [x] Diagrama de clases (`docs/sprint-diseno/03-diagrama-clases.md`).
+- [x] Diagrama de secuencia (`docs/sprint-diseno/04-diagramas-secuencia.md`).
+- [x] Diagrama de colaboración (`docs/sprint-diseno/05-diagrama-colaboracion.md`).
+- [x] Diagrama de despliegue físico (`docs/sprint-diseno/06-diagrama-despliegue.md`).
+- [x] ADRs (Architecture Decision Records) en el repositorio (`docs/adr/`).
+- [x] Patrones Repository, Factory, Observer y Singleton justificados/implementados (`docs/sprint-diseno/08-patrones-diseno.md`).
 - [ ] TDD aplicado en funcionalidades críticas.
 - [ ] JUnit 5.
 - [ ] Pruebas unitarias e integradas.
@@ -68,4 +68,9 @@ y que cumple los criterios anteriores.
 - `docs/sprint-1-retrospective.md`
 - `docs/github-projects-kanban.md`
 
-> La configuración real del tablero GitHub Projects, el repositorio público y la publicación del PDF son actividades externas al contenido del ZIP y deben completarse en GitHub/Teams según la entrega.
+## Evidencias documentales del Sprint de Diseño
+
+- `docs/sprint-diseno/00-planning-sprint-diseno.md` (y archivos 01 a 08)
+- `docs/adr/ADR-001` a `ADR-005`
+
+
