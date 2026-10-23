@@ -10,10 +10,19 @@ public class FincaService {
 
     private final FincaRepository repository;
 
+    /**
+     * Constructor para inyección de dependencias.
+     * @param repository repositorio de fincas
+     */
     public FincaService(FincaRepository repository) {
         this.repository = repository;
     }
 
+    /**
+     * Registra una nueva finca validando datos obligatorios.
+     * @param finca entidad a registrar
+     * @return finca guardada
+     */
     public Finca registrar(Finca finca) {
         if (finca == null
                 || finca.getAgricultorId() == null
@@ -25,6 +34,11 @@ public class FincaService {
         return repository.save(finca);
     }
 
+    /**
+     * Verifica si un valor es nulo o vacío.
+     * @param valor texto a validar
+     * @return true si es vacío
+     */
     private boolean esVacio(String valor) {
         return valor == null || valor.isBlank();
     }
