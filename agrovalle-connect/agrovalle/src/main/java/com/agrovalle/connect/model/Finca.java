@@ -30,15 +30,31 @@ public class Finca {
         return id;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
     public String getNombre() {
         return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getMunicipio() {
         return municipio;
     }
 
+    public void setMunicipio(String municipio) {
+        this.municipio = municipio;
+    }
+
     public Long getAgricultorId() {
         return agricultorId;
+    }
+
+    public void setAgricultorId(Long agricultorId) {
+        this.agricultorId = agricultorId;
     }
 }

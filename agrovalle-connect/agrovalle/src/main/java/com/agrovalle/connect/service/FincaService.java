@@ -3,8 +3,9 @@ package com.agrovalle.connect.service;
 import com.agrovalle.connect.model.Finca;
 import com.agrovalle.connect.repository.FincaRepository;
 import org.springframework.stereotype.Service;
+import java.util.List;
 
-/** Lógica de HU-06. */
+/** Lógica de negocio para Fincas (HU-04 y HU-06). */
 @Service
 public class FincaService {
 
@@ -19,7 +20,7 @@ public class FincaService {
     }
 
     /**
-     * Registra una nueva finca validando datos obligatorios.
+     * Registra una nueva finca validando datos obligatorios (HU-06).
      * @param finca entidad a registrar
      * @return finca guardada
      */
@@ -32,6 +33,18 @@ public class FincaService {
             throw new IllegalArgumentException("Los datos de la finca son obligatorios");
         }
         return repository.save(finca);
+    }
+
+    /**
+     * Busca fincas por municipio validando que el parámetro no esté vacío (HU-04).
+     * @param municipio nombre del municipio a buscar
+     * @return lista de fincas encontradas
+     */
+    public List<Finca> buscarPorMunicipio(String municipio) {
+        if (esVacio(municipio)) {
+            throw new IllegalArgumentException("El municipio de búsqueda no puede estar vacío");
+        }
+        return repository.findByMunicipioIgnoreCase(municipio.trim());
     }
 
     /**

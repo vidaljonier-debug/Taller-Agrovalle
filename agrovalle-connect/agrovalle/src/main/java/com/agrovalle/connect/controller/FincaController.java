@@ -1,30 +1,37 @@
 package com.agrovalle.connect.controller;
 
-import com.agrovalle.connect.dto.FincaRequest;
 import com.agrovalle.connect.model.Finca;
 import com.agrovalle.connect.service.FincaService;
-import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-/** Endpoint de HU-06. */
+import java.util.List;
+
+/** Controlador REST para la gestión de Fincas (HU-04 y HU-06). */
 @RestController
-@RequestMapping("/api/v1/fincas")
+@RequestMapping("/api/fincas")
 public class FincaController {
 
-    private final FincaService service;
+    private final FincaService fincaService;
 
-    public FincaController(FincaService service) {
-        this.service = service;
+    /**
+     * Constructor para inyección de dependencias.
+     * @param fincaService servicio de fincas
+     */
+    public FincaController(FincaService fincaService) {
+        this.fincaService = fincaService;
     }
 
-    @PostMapping
-    public ResponseEntity<Finca> registrar(@Valid @RequestBody FincaRequest request) {
-        Finca finca = new Finca(request.nombre(), request.municipio(), request.agricultorId());
-        return ResponseEntity.status(HttpStatus.CREATED).body(service.registrar(finca));
+    /**
+     * Endpoint para buscar fincas por municipio (HU-04).
+     * Ruta: GET /api/fincas/municipio/{municipio}
+     * 
+     * @param municipio nombre del municipio a consultar
+     * @return lista de fincas encontradas
+     */
+    @GetMapping("/municipio/{municipio}")
+    public ResponseEntity<List<Finca>> buscarPorMunicipio(@PathVariable String municipio) {
+        List<Finca> fincas = fincaService.buscarPorMunicipio(municipio);
+        return ResponseEntity.ok(fincas);
     }
 }
