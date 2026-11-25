@@ -110,3 +110,4 @@ erDiagram
 - `PEDIDO.estado` ∈ {`RESERVADO`, `ALISTADO`, `DESPACHADO`, `ENTREGADO`, `CANCELADO`}.
 - `OFERTA.version` habilita bloqueo optimista (ver [ADR-004](../adr/ADR-004-control-concurrencia-stock.md)).
 - Contraseñas (cuando se agregue autenticación) se almacenan solo con hash.
+- Script DDL ejecutable en PostgreSQL: [schema.sql](./schema.sql).
