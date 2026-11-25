@@ -6,6 +6,7 @@
 | **Factory** | `PedidoFactory.desde(carrito, reservas)` | Centraliza la creación de `Pedido` (número único, estado inicial `RESERVADO`, primer `EventoPedido`, total). | Diseñado |
 | **Observer** | `PedidoSubject` / `PedidoObserver` con `TrazabilidadObserver` y `NotificacionObserver` | Cada transición de estado notifica a varios interesados sin acoplar `PedidoService` a ellos (HU-14, HU-15). | Diseñado |
 | **Singleton** | `JwtProvider` y `PrecioRegionalService` (cálculo/caché de promedios) como beans de Spring (alcance singleton) | Una única instancia compartida con configuración y caché consistentes. | Diseñado |
+| **Strategy** | `CalculoFleteStrategy` (`FleteDaguaStrategy`, `FletePalmiraStrategy`) en `FleteService` | Elimina condicionales `if/else` al calcular tarifas de transporte por municipio (principio OCP). | Implementado en Sprint 2 |
 
 ## Factory — `PedidoFactory`
 
