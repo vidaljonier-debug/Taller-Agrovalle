@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: agrovalle-connect
+  datasource:
+    url: ${STAGING_DB_URL}
+    username: ${STAGING_DB_USER}
+    password: ${STAGING_DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: ${PORT:8080}
+
+app:
+  jwt:
+    secret: ${JWT_SECRET_KEY}
+    expiration-minutes: 60

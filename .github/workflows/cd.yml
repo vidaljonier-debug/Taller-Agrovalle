@@ -1,0 +1,28 @@
+name: CD Pipeline - AgroValle Staging
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify-and-test:
+    uses: ./.github/workflows/ci.yml
+
+  deploy-staging:
+    needs: verify-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Disparar Despliegue en PaaS (Render/Railway)
+        env:
+          DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
+        run: |
+          if [ -n "$DEPLOY_HOOK_URL" ]; then
+            curl -f -X POST "$DEPLOY_HOOK_URL"
+          else
+            echo "DEPLOY_HOOK_URL no configurado aún en GitHub Secrets."
+            exit 1
+          fi
