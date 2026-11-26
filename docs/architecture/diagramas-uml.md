@@ -1,5 +1,7 @@
 # Arquitectura y Diagramación UML - AgroValle Connect
 
+> **Decisión Arquitectónica Relacionada:** [ADR-001: Adopción de PaaS y GitHub Actions para Despliegue Continuo en Staging](../architecture-decisions/ADR-001-despliegue-staging-paas.md)
+
 Documento consolidado de vistas estructurales y de comportamiento del sistema AgroValle Connect, alineado con los estándares **ISO/IEC/IEEE 29148:2018** e **ISO/IEC 25010**.
 
 ---

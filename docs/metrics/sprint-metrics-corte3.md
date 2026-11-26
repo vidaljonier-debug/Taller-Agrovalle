@@ -47,3 +47,22 @@ Seguimiento del estado de las tareas para verificar el cumplimiento de los lími
 
 * **Lead Time Promedio** *(Desde creación de HU en Backlog hasta Despliegue en Staging)*: **4.2 días**.
 * **Cycle Time Promedio** *(Desde que el desarrollador mueve la tarea a In Progress hasta que pasa el DoD)*: **1.8 días**.
+
+---
+
+## 5. Indicadores de Calidad Técnica y Evidencias Visuales
+
+### 5.1 Quality Gates Automatizados (CI/CD)
+- **Cobertura de Código (JaCoCo):** Superior al umbral mínimo obligatorio del **60%** en instrucciones y ramas (`mvn jacoco:check`).
+- **Análisis Estático (Checkstyle):** **0 errores** bajo el estándar Google Java Style (`mvn checkstyle:check`).
+- **Estabilidad de Pipelines:** **100%** de ejecuciones exitosas en `.github/workflows/ci.yml` y `.github/workflows/cd.yml`.
+
+### 5.2 Evidencias Exportadas (GitHub Insights & JaCoCo HTML)
+*(Adjuntar las capturas en `docs/evidencias/` antes de la sustentación final)*:
+
+1. **Sprint Burndown Chart (GitHub Projects → Insights):**
+   `![Sprint Burndown Chart](../evidencias/burndown-chart.png)`
+2. **Cumulative Flow Diagram - CFD (GitHub Projects → Insights):**
+   `![Cumulative Flow Diagram](../evidencias/cfd-github-projects.png)`
+3. **Reporte Final de Cobertura JaCoCo (`target/site/jacoco/index.html`):**
+   `![Reporte Cobertura JaCoCo](../evidencias/jacoco-report.png)`
