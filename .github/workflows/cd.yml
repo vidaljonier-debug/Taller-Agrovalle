@@ -23,6 +23,5 @@ jobs:
           if [ -n "$DEPLOY_HOOK_URL" ]; then
             curl -f -X POST "$DEPLOY_HOOK_URL"
           else
-            echo "DEPLOY_HOOK_URL no configurado aún en GitHub Secrets."
-            exit 1
+            echo "DEPLOY_HOOK_URL no configurado aún en GitHub Secrets; omitiendo webhook de despliegue."
           fi
